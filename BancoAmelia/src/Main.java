@@ -8,7 +8,7 @@ public class Main {
     static int opcaoMenuBancario = 0;
 
     static double valorPix = 0;
-    static double saldoAntigo = 0;
+    static double saldoAtual = 0;
     static double saldoNovo = 0;
 
     public static void main(String[] args) {
@@ -79,10 +79,10 @@ public class Main {
                     System.out.print("\nInsira o valor desejado para transferir: ");
 
                     valorPix = input.getDouble();
-                    saldoAntigo= cliente.getSaldo();
-                    saldoNovo=saldoAntigo-valorPix;
+                    saldoAtual = cliente.getSaldo();
+                    saldoNovo= saldoAtual -valorPix;
 
-                    if (!operacao.transferirPix(valorPix, cliente.saldo)){
+                    if (!operacao.transferirPix(valorPix, saldoAtual)){
 
                         System.out.println("\nVocê não tem saldo suficiente para realizar essa operação!\n");
 
@@ -100,10 +100,10 @@ public class Main {
                     System.out.print("\nVocê receberá quanto via Pix? ");
 
                     double valorRecebimento = input.getDouble();
-                    saldoAntigo= cliente.getSaldo();
-                    saldoNovo=saldoAntigo+valorPix;
+                    saldoAtual = cliente.getSaldo();
+                    saldoNovo= saldoAtual +valorPix;
 
-                    operacao.receberPix(valorRecebimento, cliente.getSaldo());
+                    operacao.receberPix(valorRecebimento, saldoAtual);
 
                     cliente.setSaldo(saldoNovo);
 
