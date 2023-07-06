@@ -1,3 +1,5 @@
+package br.com.lunx.bank;
+
 public class Opera {
 
     public boolean transferirPix(double valor, double saldo) {

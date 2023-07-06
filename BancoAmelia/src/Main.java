@@ -1,3 +1,7 @@
+import br.com.lunx.bank.Opera;
+import br.com.lunx.cliente.Cliente;
+import br.com.lunx.input.Input;
+
 import java.util.UUID;
 
 public class Main {
@@ -29,7 +33,7 @@ public class Main {
         cliente.setAtivo(true);
         cliente.setTipoConta(tipoConta);
 
-        System.out.println("\nCliente cadastrado com sucesso!");
+        System.out.println("\nbr.com.lunx.cliente.Cliente cadastrado com sucesso!");
 
         System.out.println("\n***************************************\n");
         System.out.println("Nome do cliente: " + cliente.getNome());

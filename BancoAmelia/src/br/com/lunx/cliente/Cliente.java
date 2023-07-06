@@ -1,3 +1,5 @@
+package br.com.lunx.cliente;
+
 import java.util.Scanner;
 import java.util.UUID;
 

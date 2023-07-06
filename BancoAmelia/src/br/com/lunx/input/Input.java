@@ -1,3 +1,5 @@
+package br.com.lunx.input;
+
 import java.util.Scanner;
 
 public class Input {
